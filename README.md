@@ -4,7 +4,7 @@
 
 This project aims to implement an AI agent capable of playing the game of tic-tac-toe. The agent's objective is to learn an optimal policy for making moves using the Markov decision process, Monte Carlo and Temporal Difference Learning methods. 
 
-## Markov decision process (MDP)
+## Tic-Tac-Toe using Markov decision process (MDP)
 A Markov Decision Process is a mathematical framework for modeling decision-making problems in the presence of uncertainty. In this project, we utilize an MDP to train an AI agent to play tic-tac-toe effectively. Here's a more detailed explanation of the key components and their roles:
 1. **Agent.py**: Contains the implementation of the AI agent class. The agent uses a pre-trained policy to make decisions during the game. If a policy is not available for a particular game state, the agent makes a random move.
 
@@ -44,7 +44,7 @@ The project directory is structured as follows:
 - `MDP.py`: Handles the training of the AI agent using the MDP framework.
 - `policy.txt`: Stores the learned policy in a readable format.
 
-Tic-Tac-Toe Agent using Monte Carlo Methods
+Tic-Tac-Toe using Monte Carlo Methods
 ------------------------------------------------------
 
 **Project Objective:**
