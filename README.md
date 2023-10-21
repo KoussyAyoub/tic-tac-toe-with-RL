@@ -43,8 +43,61 @@ The project directory is structured as follows:
 - `Env.py`: Manages the game environment and logic.
 - `MDP.py`: Handles the training of the AI agent using the MDP framework.
 - `policy.txt`: Stores the learned policy in a readable format.
-- `V.txt`: Stores the value function (V) in a readable format.
-- `Main.py`: Provides a script to run the project.
+
+Tic-Tac-Toe Agent using Monte Carlo Methods
+------------------------------------------------------
+
+**Project Objective:**
+
+The objective of this project is to train an agent to play the game of Tic-Tac-Toe using Monte Carlo methods. Monte Carlo methods are a class of reinforcement learning techniques that allow the agent to learn through trial and error. In this specific project, we have implemented three different Monte Carlo methods for training the agent:
+
+1. **Monte Carlo Prediction (MCP)**: This method is used to estimate the value function for different states in the game. It helps the agent understand how good or bad a state is.
+
+2. **On-Policy First-Visit Monte Carlo with Exploring Starts**: This method combines on-policy learning with exploration. It ensures that the agent explores different states by starting from random states, improving the learning process.
+
+3. **On-Policy First-Visit Monte Carlo Control with Epsilon-Greedy Policy**: This method aims to find the optimal policy for the agent to maximize its rewards. It uses epsilon-greedy exploration, where the agent sometimes explores random actions.
+
+**Project Components:**
+
+The project consists of several Python files, each with specific responsibilities:
+
+1. **Agent.py**:
+   - Defines the `Agent` class responsible for the agent's behavior.
+   - Reads a policy from an external file to make decisions.
+   - Chooses actions based on the policy, with provisions for random exploration when no policy exists.
+
+2. **Agent_epsilon_greedy.py**:
+   - Similar to `Agent.py`, but with an added exploration strategy using epsilon-greedy. The agent explores random actions with a certain probability.
+   
+3. **Human.py**:
+   - Defines the `Human` class for human players to participate in the game.
+   - Allows human players to choose their moves and ensures the moves are valid.
+
+4. **Env.py**:
+   - Represents the game environment.
+   - Keeps track of the game state, the current winner, and methods for checking the winner and calculating rewards.
+   - Provides a method to play the game where human and agent take turns.
+
+5. **MCP.py**:
+   - Defines the `MCP` class, responsible for training the agent using the Monte Carlo methods.
+   - Implements three specific methods: Monte Carlo Prediction, On-Policy First-Visit Monte Carlo with Exploring Starts, and On-Policy First-Visit Monte Carlo Control with Epsilon-Greedy Policy.
+   - Each method is used to learn and improve the agent's behavior.
+
+6. **Main.py**:
+   - The main script that ties everything together.
+   - Creates instances of the `MCP` class and trains the agent using the chosen Monte Carlo method.
+   - Checks if the policy has changed during training and saves the learned policy to a file in a dictionary format.
+
+**Using the Code:**
+
+To use the code in this project, follow these steps:
+
+1. Run the `Main.py` script to initiate the training of the agent using one of the Monte Carlo methods.
+2. Ensure that the required classes (`Agent`, `Agent_epsilon_greedy`, `Human`, `Env`, and `MCP`) are correctly imported.
+3. You may need to provide the path to an initial policy file to start the training.
+4. The code will train the agent and save the learned policy to a file for future use.
+
+
 
 
 
