@@ -99,6 +99,62 @@ To use the code in this project, follow these steps:
 
 
 
+## Tic-Tac-Toe using Temporal Difference Learning
+
+### Project Overview
+
+This project is a Python-based implementation of a Tic-Tac-Toe game where an agent learns to play using reinforcement learning techniques. The objective is to train the agent to make optimal moves and improve its performance over time.
+
+### Project Components
+
+The project consists of several Python classes that work together to achieve the learning objectives:
+
+1. **Agent.py**: This class represents the agent, which learns to play Tic-Tac-Toe. It initializes with a policy and uses temporal difference learning methods to update its policy. The agent can choose actions based on its policy and explore or exploit its moves using epsilon-greedy exploration.
+
+2. **Agent_epsilon_greedy.py**: Similar to the Agent class in Agent.py, but with an additional exploration-exploitation mechanism (epsilon-greedy) to balance the agent's actions between learning and exploiting its existing policy.
+
+3. **Human.py**: This class represents a human player who can interact with the Tic-Tac-Toe game. The human player can choose positions to make moves on the game board.
+
+4. **Env.py**: The Environment class, which simulates the Tic-Tac-Toe game. It keeps track of the game's status and handles the logic for checking a winner, printing the game board, and more.
+
+5. **TDL.py**: The Temporal Difference Learning class, which focuses on training the agent using reinforcement learning techniques. It implements Sarsa and n-step Sarsa algorithms to update the agent's policy.
+
+### How to Run
+
+To run this project, follow these steps:
+
+1. Clone the repository from GitHub to your local machine.
+
+2. Make sure you have Python installed on your system.
+
+3. Open a terminal and navigate to the project's directory.
+
+4. Run the main script **TDL.py** to start the training process:
+
+5. The agent will start learning to play Tic-Tac-Toe using the specified reinforcement learning method.
+
+6. Once the training is complete, you can evaluate the agent's performance by running the game with a human player or other agents using **Env.py**.
+
+### Project Output
+
+The project's main output is the learned policy of the agent, which represents the optimal moves in different game states. This policy is saved to a file named `policy_TDL_Sarsa_n.txt`.
+
+### Customization
+
+You can customize various aspects of the project to fit your needs:
+
+- Adjust the reinforcement learning parameters in `TDL.py` such as alpha (learning rate) and gamma (discount factor).
+- Modify the exploration rate (epsilon) in `Agent.py` and `Agent_epsilon_greedy.py` to control the agent's exploration vs. exploitation balance.
+- Adapt the reward function in `Env.py` to change the way the agent is rewarded based on the game's outcome.
+
+## Contributing
+
+If you want to contribute to this project, feel free to create a pull request with your changes or improvements. We welcome contributions to enhance the functionality or provide better documentation.
+
+
+
+
+
 
 
 
